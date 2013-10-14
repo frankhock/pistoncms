@@ -11,12 +11,17 @@ html
       #piston_side_nav_wrap
         ul#side_nav_menu
           li.menu-top
-            a href="#" Dashboard
+            a href="#"
+              span.glyphicon.glyphicon-home
+              | Dashboard
           li.menu-top
-            a href="#{posts_path}" Posts
+            a href="#{posts_path}"
+              span.glyphicon.glyphicon-pencil
+              | Posts
           li.menu-top
-            a href="#{pages_path}" Pages
-        //= link_to "PistonCMS", "#", class: "piston-brand"
+            a href="#{pages_path}"
+              span.glyphicon.glyphicon-paperclip
+              | Pages
 
       #piston_content
         #piston_body

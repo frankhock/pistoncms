@@ -29,11 +29,19 @@
     padding: 0;
     cursor: pointer;
     a {
-      border-width: 1px 0;
-      border-style: solid none;
+      display: block;
+      padding: 15px;
       font-weight: 600;
+      border-bottom: 1px solid rgba(0,0,0,0.10) !important;
+      border-top: 1px solid rgba(255,255,255,0.05) !important;
+      transition: color .2s ease-in-out 0s;
       &:hover {
+        color: #fff;
+        background: #229aea;
         text-decoration: none;
+      }
+      span {
+        margin-right: 10px;
       }
     }
   }
