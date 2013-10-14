@@ -1,0 +1,7 @@
+- if resource && resource.errors.any?
+    
+  #error_explanation.alert.alert-danger.fade.in
+    a.close *{"data-dismiss" => "alert", :href => "#"} ×
+    ul
+      - resource.errors.full_messages.uniq.each do |msg|
+        li= msg
