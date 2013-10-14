@@ -1,5 +1,6 @@
 module Pistoncms
   class Entry < ActiveRecord::Base
+    acts_as_paranoid
 
     BULK_ACTIONS = {trash: 'Move to Trash'}
 

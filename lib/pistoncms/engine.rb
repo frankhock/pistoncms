@@ -3,6 +3,7 @@ require 'ckeditor'
 require 'sass-rails'
 require 'coffee-rails'
 require 'jquery-rails'
+require 'paranoia'
 require 'slim-rails'
 
 module Pistoncms

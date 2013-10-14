@@ -22,7 +22,8 @@ class Pistoncms::EntryBulkActionHandler
   private
 
   def delete_all
-    affected = Pistoncms::Entry.delete_all(["id in (?)", entries])
+    affected = 0
+    Pistoncms::Entry.find(entries).each { |e| affected += 1 if e.destroy }
 
     if affected > 0
       self.flash = "#{pluralize(affected, 'Item')} moved to the Trash."

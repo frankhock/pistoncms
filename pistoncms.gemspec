@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ckeditor', '~> 4.0.6'
   s.add_dependency 'coffee-rails', '~> 4.0.0'
   s.add_dependency 'jquery-rails', '~> 3.0.4'
+  s.add_dependency 'paranoia', '~> 2.0.0'
   s.add_dependency 'rails', '~> 4.0.0'
   s.add_dependency 'sass-rails', '~> 4.0'
   s.add_dependency 'slim-rails', '>= 2.0.3'

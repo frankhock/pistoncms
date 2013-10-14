@@ -41,8 +41,9 @@
                 td= link_to entry.title.titleize, eval("edit_#{class_name(entry).downcase}_path(entry)")
                 td= entry.created_at.strftime("%d/%m/%Y")
 
-        .panel-body
-          .bulk-actions
-            .table-nav.bottom
-              = select_tag "bulk_action", options_for_select(entry_bulk_actions_array), class: "form-control input-sm inline"
-              = submit_tag "Apply", class: "btn btn-default"
+        / TODO fix because above bulk actions interferes
+        / .panel-body
+        /   .bulk-actions
+        /     .table-nav.bottom
+        /       = select_tag "bulk_action", options_for_select(entry_bulk_actions_array), class: "form-control input-sm inline"
+        /       = submit_tag "Apply", class: "btn btn-default"
