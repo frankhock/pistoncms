@@ -1,8 +1,9 @@
 
 /*** bootstrap ***/
+@import 'sections/variables';
 @import "twitter/bootstrap";
 
-@import 'sections/variables';
+
 @import 'common';
 
 @import 'sections/bootstrap_overrides';
