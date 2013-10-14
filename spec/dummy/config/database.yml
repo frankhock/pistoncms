@@ -1,0 +1,17 @@
+
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: pistoncms_dev
+  pool: 5
+  username: hancock
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: pistoncms_test
+  pool: 5
+  username: hancock
+  password:

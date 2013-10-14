@@ -1,0 +1,71 @@
+body.pistoncms {
+  background: #F3F5F9;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #717171;
+
+  .container-fluid {
+    padding: 0;
+  }
+}
+
+.inline {
+  display: inline-block;
+}
+
+.wrap {
+  margin: 15px 20px 0 0;
+}
+
+#piston_wrap {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#piston_body {
+  position: relative;
+}
+
+#piston_body_content {
+  padding-bottom: 65px;
+  float: left;
+  width: 100%;
+}
+
+.piston-brand {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #444;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+#piston_content {
+  height: 100%;
+}
+
+#piston_content, #piston_footer {
+  margin-left: $side-nav-width + 20px;
+}
+
+// Sprite Menus
+div.piston-menu-image {
+  background-image: url('/assets/pistoncms/side_menu.png');
+}
+
+#icon-edit {
+  background-image: url('/assets/pistoncms/icons32.png');
+}
+
+.icon32 {
+  float: left;
+  height: 32px;
+  width: 32px;
+  margin: 5px 10px 0 0;
+}

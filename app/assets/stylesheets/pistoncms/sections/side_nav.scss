@@ -1,0 +1,52 @@
+#piston_side_nav_wrap, #side_nav_menu,
+#piston_side_nav_back {
+  width: $side-nav-width;
+}
+
+#piston_side_nav_back {
+  background-color: #F9FAFC;
+  border-right: 1px solid #e0e4e8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#piston_side_nav_wrap {
+  text-align: center;
+  position: relative;
+  float: left;
+}
+
+#side_nav_menu {
+  text-align: left;
+  clear: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    a {
+      border-width: 1px 0;
+      border-style: solid none;
+      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  li.menu-top:hover {
+  }
+  
+  div.piston-menu-image {
+    float: left;
+    width: 30px;
+    height: 30px;
+  }
+  div.piston-menu-name {
+    padding: 5px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,44 @@
+body.pistoncms {
+
+
+  /* FORMS */
+
+  .form-control:focus {
+    border-color: #66AFE9;
+    @include box-shadow(none);
+  }
+
+  .panel {
+    border-radius: 2px;
+    border-color: #EBEFF6;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0);
+    @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+     h2 {
+      font-size: 26px;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+    }
+
+    h3 {
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+    }
+  }
+
+  .panel-heading {
+    font-weight: 700;
+    border-color: #EBEFF6;
+    background-color: #FFF;
+    border-radius: 2px 2px 0 0;
+    padding: 10px 15px;
+  }
+
+  /** BUTTONS **/
+
+
+}

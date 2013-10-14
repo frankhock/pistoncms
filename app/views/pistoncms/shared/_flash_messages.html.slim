@@ -1,0 +1,6 @@
+.flashContainer
+  - flash.each do |key, value|
+    - unless key == :timedout
+      div class="#{flash_class(key)} fade in" id="flash_message"
+        a.close data-dismiss="alert" href="#" x 
+        = value

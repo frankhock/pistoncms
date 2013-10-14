@@ -1,0 +1,27 @@
+= form_for entry do |f|
+  #entry_stuff
+    #entry_body
+
+      / Menu Content
+      #entry_body_content
+        .form-group
+          = f.text_field :title, class: "form-control", placeholder: "Enter title here"
+
+        .form-group
+          = f.cktext_area :content, ckeditor: { uiColor: "#FFFFFF" }
+
+      / Sidebar
+      #entrybox_container_side
+        section.panel.entry-box
+          header.panel-heading
+            h3 Publish
+          .inner
+            #minor-publishing
+
+            #major-publishing-actions
+              #publishing-action
+                = f.submit 'Publish', class: "btn btn-primary"
+              .clearfix
+            
+
+      .clearfix

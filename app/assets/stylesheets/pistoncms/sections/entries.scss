@@ -1,0 +1,65 @@
+/* Index
+-----------------*/
+
+#entry-index .panel-heading h2 a {
+  margin-left: 10px;
+}
+
+ul.entry-status-selection {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.search-entries {
+  float: right;
+  display: inline-block;
+  width: 300px;
+}
+
+.bulk-actions {
+  input[type="submit"] {
+    margin-left: 5px;
+  }
+}
+
+
+/* New/Edit
+-----------------*/
+
+#entry_stuff {
+  padding-top: 10px;
+
+  #entry_body {
+    margin-right: 300px;
+  }
+}
+
+#entry_body_content {
+  margin-bottom: 20px;
+  width: 100%;
+  float: left;
+}
+
+#entrybox_container_side {
+  float: right;
+  margin-right: -300px;
+  width: 280px;
+}
+
+.entry-box {
+  .inner {
+    line-height: 1.4em;
+  }
+}
+
+#major-publishing-actions {
+  padding: 10px 10px 8px;
+  clear: both;
+  border-top: #f5f5f5;
+}
+
+#publishing-action {
+  float: right;
+  line-height: 23px;
+}
