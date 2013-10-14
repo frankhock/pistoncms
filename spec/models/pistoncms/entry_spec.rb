@@ -10,7 +10,7 @@ module Pistoncms
       it { should validate_uniqueness_of(:name) }
 
       before { subject.save }
-      [:title, :name].each do |attribute|
+      [:title].each do |attribute|
 
         context "when #{attribute} is nil" do 
           subject { Entry.new(attribute => nil) }

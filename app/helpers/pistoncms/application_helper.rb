@@ -9,6 +9,11 @@ module Pistoncms
       instance.class.name.split("::").last
     end
 
+    # displays error messages for failed form
+    def error_messages_for(resource)
+      render partial: "pistoncms/shared/error_messages", locals: { resource: resource }
+    end
+
     # add bootstrap styling to flash messages
     def flash_class(level)
       case level

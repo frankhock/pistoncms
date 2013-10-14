@@ -5,7 +5,8 @@ module Pistoncms
     BULK_ACTIONS = {trash: 'Move to Trash'}
 
     # Validations
-    validates :title, :name, presence: true, uniqueness: true
+    validates :title, presence: true, uniqueness: true
+    validates :name, uniqueness: true
 
     # Callbacks
     before_validation :_set_name
