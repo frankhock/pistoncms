@@ -6,7 +6,6 @@ group :development do
   gem 'bullet'
   gem 'quiet_assets'
   gem 'awesome_print'
-  gem 'sunspot_solr'
   gem 'jazz_hands'
   gem 'meta_request'
 end
@@ -24,4 +23,5 @@ end
 
 group :test do 
   gem 'shoulda-matchers'
+  gem 'devise', '>= 3.0.0.rc'
 end

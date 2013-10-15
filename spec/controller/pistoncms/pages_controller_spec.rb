@@ -4,6 +4,7 @@ module Pistoncms
 
   describe PagesController, :type => :controller do 
     render_views
+    login_admin
 
     let!(:page) { create(:page) }
 

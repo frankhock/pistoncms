@@ -1,3 +1,5 @@
+
+# is used for controller tests inside rails engine
 module EngineControllerTestMonkeyPatch
   def get(action, parameters = nil, session = nil, flash = nil)
     process_action(action, parameters, session, flash, "GET")

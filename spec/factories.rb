@@ -12,4 +12,10 @@ FactoryGirl.define do
     end
   end
 
+  factory :admin do 
+    sequence(:email) { |n| "frank.hock#{n}@gmail.com" }
+    password "password"
+    password_confirmation "password"
+  end
+
 end

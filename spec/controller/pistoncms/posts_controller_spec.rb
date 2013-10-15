@@ -4,6 +4,7 @@ module Pistoncms
 
   describe PostsController, :type => :controller do 
     render_views
+    login_admin
 
     let!(:post) { create(:post) }
 
