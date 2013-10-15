@@ -1,0 +1,10 @@
+# Pistoncms config file. Generated on <%= DateTime.now.to_s(:long) %>
+
+Pistoncms.config do |config|
+
+  ################  Global configuration  ################
+
+  # RailsAdmin may need a way to know who the current user is]
+  config.current_user_method { <%= @current_user_method %> } # auto-generated
+
+end
