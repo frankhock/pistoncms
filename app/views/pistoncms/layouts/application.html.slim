@@ -6,6 +6,9 @@ html
     = javascript_include_tag "pistoncms/application"
     = csrf_meta_tags
   body.pistoncms
+    header.navbar.navbar-inverse.header
+      .navbar-header.nav-bar.lside
+        = link_to "Piston", "#", class: "nav-brand", data: { toggle: "fullscreen" }
     #piston_wrap
       #piston_side_nav_back
       #piston_side_nav_wrap

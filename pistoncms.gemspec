@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Frank Hock"]
   s.email       = ["frank@thinkmechanic.com"]
   s.homepage    = "http://www.pistoncms.com"
-  s.summary     = "Wordpress on Rails"
+  s.summary     = "The Developer's CMS"
   s.description = "Description of Pistoncms."
 
   s.test_files = Dir["spec/**/*"]

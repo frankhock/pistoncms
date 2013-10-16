@@ -16,6 +16,31 @@ body.pistoncms {
   margin: 15px 20px 0 0;
 }
 
+.lside {
+  width: $side-nav-width;
+}
+
+.header {
+  background: #2a2a2a;
+  min-height: 0;
+  border: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+.nav-brand {
+  color: #f1f1f1;
+  font-family: 'Raleway';
+  text-align: center;
+  font-size: 24px;
+  line-height: 48px;
+  display: block;
+  &:hover {
+    color: #f1f1f1;
+    text-decoration: none;
+  }
+}
+
 #piston_wrap {
   height: auto;
   min-height: 100%;
