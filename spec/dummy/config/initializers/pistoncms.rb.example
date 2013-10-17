@@ -1,0 +1,10 @@
+# Pistoncms config file. Generated on October 16, 2013 09:37
+
+Pistoncms.config do |config|
+
+  ################  Global configuration  ################
+
+  # Pistoncms may need a way to know who the current user is]
+  config.current_user_method { current_admin } # auto-generated
+
+end

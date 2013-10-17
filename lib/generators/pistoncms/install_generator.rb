@@ -6,8 +6,9 @@ require File.expand_path('../utils', __FILE__)
 module Pistoncms
   class InstallGenerator < Rails::Generators::Base
     source_root File.expand_path("../templates", __FILE__)
+    include Rails::Generators::Migration
     include Generators::Utils::InstanceMethods
-    include Generators::Utils::ClassMethods
+    extend Generators::Utils::ClassMethods
 
     class_option :skip_devise, :type => :boolean, :aliases => '-D',
       :desc => "Skip installation and setup of devise gem."
@@ -89,7 +90,9 @@ module Pistoncms
           display "Couldn't parse your config file: current_user_method couldn't be updated", :red
         end
       end
-       display "Job's done: migrate, start your server and visit '/#{namespace}'!", :magenta
+      display "Lets copy over piston's migration files"
+      migration_template 'create_entries.rb', 'db/migrate/create_pistoncms_entries.rb'
+      display "Job's done: customize devise, migrate, start your server and visit '/#{namespace}'!", :magenta
 
     end
 

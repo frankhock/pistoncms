@@ -1,7 +1,11 @@
 Pistoncms::Engine.routes.draw do
 
-  resources :pages
+  # Backend
+  scope "/admin" do
+    resources :pages
+    resources :posts
+  end
 
-  resources :posts
+  match '*path' => 'pistoncms/public/entries#show'
 
 end

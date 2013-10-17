@@ -11,6 +11,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'devise', '>= 3.0.0.rc'
   gem 'pry-rails'
   gem 'ffaker'
   gem "awesome_print"
@@ -23,5 +24,4 @@ end
 
 group :test do 
   gem 'shoulda-matchers'
-  gem 'devise', '>= 3.0.0.rc'
 end
