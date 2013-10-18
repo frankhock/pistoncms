@@ -9,7 +9,7 @@ class Pistoncms::Public::PostsController < Pistoncms::Public::ApplicationControl
   private
 
   def _set_post
-    @post = Pistoncms::Post.find_by!(slug: params[:post_slug])
+    @post = Pistoncms::Post.find_by!(slug: params[:slug])
   end
 
 end

@@ -1,3 +1,10 @@
+class RouteConstraint
+  def matches?(request)
+    binding.pry
+    Pistoncms::Page.find_by(slug: request.params[:slug]) ? true : false
+  end
+end
+
 Pistoncms::Engine.routes.draw do
 
   # Backend
@@ -6,9 +13,9 @@ Pistoncms::Engine.routes.draw do
     resources :posts
   end
 
-  match ':post_slug' => 'public/posts#show', as: "public_post", via: [:get]
-  match ':page_slug' => 'public/pages#show', as: "public_page", via: [:get]
+  get ':slug' => 'public/pages#show', as: "public_page", constraints: RouteConstraint.new
+  get ':slug' => 'public/posts#show', as: "public_post"
 
-  match '*slug' => 'public/entries#show', via: [:get]
+  get '*slug' => 'public/entries#show'
 
 end

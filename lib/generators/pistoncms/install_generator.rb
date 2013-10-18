@@ -45,7 +45,7 @@ module Pistoncms
         end
       end
 
-      namespace = ask_for("Where do you want to mount pistoncms?", "admin", _namespace)
+      namespace = ask_for("Where do you want to mount pistoncms?", "", _namespace)
       gsub_file "config/routes.rb", /mount Pistoncms::Engine => \'\/.+\', :as => \'pistoncms\'/, ''
       route("mount Pistoncms::Engine => '/#{namespace}', :as => 'pistoncms'")
 
@@ -91,7 +91,7 @@ module Pistoncms
         end
       end
       display "Lets copy over piston's migration files"
-      migration_template 'create_entries.rb', 'db/migrate/create_pistoncms_entries.rb'
+      migration_template 'create_tables.rb', 'db/migrate/create_pistoncms_tables.rb' rescue display $!.message
       display "Job's done: customize devise, migrate, start your server and visit '/#{namespace}'!", :magenta
 
     end

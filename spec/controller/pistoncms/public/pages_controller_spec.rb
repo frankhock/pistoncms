@@ -8,7 +8,7 @@ describe Pistoncms::Public::PagesController, :type => :controller do
   describe 'GET show' do 
 
     context 'with existing page' do 
-      before { get :show, page_slug: page.slug }
+      before { get :show, slug: page.slug }
 
       it { should render_template(:show) }
 
@@ -18,7 +18,7 @@ describe Pistoncms::Public::PagesController, :type => :controller do
     end
 
     context 'with non-existent page' do 
-      before { get :show, page_slug: "fuck" }
+      before { get :show, slug: "fuck" }
       
       it { should respond_with 404 }
     end

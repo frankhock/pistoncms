@@ -9,7 +9,7 @@ class Pistoncms::Public::PagesController < Pistoncms::Public::ApplicationControl
   private
 
   def _set_page
-    @page = Pistoncms::Page.find_by!(slug: params[:page_slug])
+    @page = Pistoncms::Page.find_by!(slug: params[:slug])
   end
 
 end
