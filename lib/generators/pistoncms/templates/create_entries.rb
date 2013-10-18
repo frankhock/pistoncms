@@ -6,8 +6,8 @@ class CreatePistoncmsEntries < ActiveRecord::Migration
       t.string :name,       null: false
       t.string :slug
       t.string :content
-      t.timestamps
       t.datetime :deleted_at
+      t.timestamps
     end
 
     add_index :pistoncms_entries, :slug, unique: true

@@ -91,7 +91,8 @@ module Pistoncms
         end
       end
       display "Lets copy over piston's migration files"
-      migration_template 'create_tables.rb', 'db/migrate/create_pistoncms_tables.rb' rescue display $!.message
+      migration_template 'create_entries.rb', 'db/migrate/create_pistoncms_entries.rb' rescue display $!.message
+      migration_template 'create_friendly_id_slugs.rb', 'db/migrate/create_friendly_id_slugs.rb' rescue display $!.message
       display "Job's done: customize devise, migrate, start your server and visit '/#{namespace}'!", :magenta
 
     end
