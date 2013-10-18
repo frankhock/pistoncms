@@ -38,7 +38,7 @@ class Pistoncms::PostsController < Pistoncms::ApplicationController
   private
 
   def _set_post
-    @entry = Pistoncms::Post.find(params[:id]) if params[:id]
+    @entry = Pistoncms::Post.friendly.find(params[:id]) if params[:id]
   end
 
   def post_params

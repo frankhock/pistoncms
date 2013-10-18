@@ -38,7 +38,7 @@ class Pistoncms::PagesController < Pistoncms::ApplicationController
   private
 
   def _set_page
-    @entry = Pistoncms::Page.find(params[:id]) if params[:id]
+    @entry = Pistoncms::Page.friendly.find(params[:id]) if params[:id]
   end
 
   def page_params

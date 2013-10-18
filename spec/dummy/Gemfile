@@ -7,3 +7,8 @@ gem 'pg'
 gem 'pistoncms', :path => '../../'
 
 gem "devise"
+
+group :development do
+  gem 'quiet_assets'
+  gem 'pry-rails'
+end

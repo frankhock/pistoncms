@@ -1,5 +1,8 @@
 module Pistoncms
   class Entry < ActiveRecord::Base
+    extend FriendlyId
+    friendly_id :title, use: [:slugged, :finders]
+    
     acts_as_paranoid
 
     BULK_ACTIONS = {trash: 'Move to Trash'}
@@ -10,6 +13,16 @@ module Pistoncms
 
     # Callbacks
     before_validation :_set_name
+
+    #
+    # Instance Methods
+    #
+
+    def type(options={})
+      namespace = options.fetch(:namespace, true)
+      type = super()
+      namespace ? type : type.split("::").last
+    end
 
     private
 

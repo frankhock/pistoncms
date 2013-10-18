@@ -6,6 +6,8 @@ Pistoncms::Engine.routes.draw do
     resources :posts
   end
 
-  match '*path' => 'pistoncms/public/entries#show'
+  match ':page_slug' => 'public/pages#show', as: "public_page", via: [:get]
+
+  match '*slug' => 'public/entries#show', via: [:get]
 
 end

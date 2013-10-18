@@ -26,5 +26,25 @@ module Pistoncms
       entry.name.should eq("hello-there")
     end
 
+    context 'instance of entry' do 
+
+      describe '#type' do 
+        let(:page) { build(:page) }
+
+        context 'namespace true' do 
+          it 'should set type' do 
+            page.type.should eq("Pistoncms::Page")
+          end
+        end
+
+        context 'namespace false' do 
+          it 'should set type' do 
+            page.type(namespace: false).should eq("Page")
+          end
+        end
+      end
+
+    end
+
   end
 end
