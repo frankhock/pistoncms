@@ -18,7 +18,7 @@ describe Pistoncms::Public::PagesController, :type => :controller do
     end
 
     context 'with non-existent page' do 
-      before { get :show, page_slug: "fuck"}
+      before { get :show, page_slug: "fuck" }
       
       it { should respond_with 404 }
     end
