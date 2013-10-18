@@ -1,6 +1,5 @@
 class RouteConstraint
   def matches?(request)
-    binding.pry
     Pistoncms::Page.find_by(slug: request.params[:slug]) ? true : false
   end
 end
