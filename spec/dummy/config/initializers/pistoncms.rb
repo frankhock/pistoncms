@@ -4,7 +4,10 @@ Pistoncms.config do |config|
 
   ################  Global configuration  ################
 
-  # RailsAdmin may need a way to know who the current user is]
+  # Pistoncms may need a way to know who the current user is]
   config.current_user_method { current_admin } # auto-generated
-
+  
 end
+
+Pistoncms.config.public_layout = 'application'
+

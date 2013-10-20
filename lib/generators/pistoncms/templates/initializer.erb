@@ -7,4 +7,6 @@ Pistoncms.config do |config|
   # Pistoncms may need a way to know who the current user is]
   config.current_user_method { <%= @current_user_method %> } # auto-generated
 
+  config.engine_public_layout { 'application' }
+
 end

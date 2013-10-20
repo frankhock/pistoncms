@@ -23,8 +23,15 @@ module Pistoncms
       request.env["warden"].try(:user) || respond_to?(:current_user) && current_user
     end
 
+    mattr_accessor :public_layout
+
+    def self.public_layout=(value)
+      @@public_layout = value if value.present?
+      @@public_layout || 'pistoncms/layouts/application'
+    end
 
     class << self
+
 
       # Setup authentication to be run as a before filter
       # This is run inside the controller instance so you can setup any authentication you need to
@@ -108,6 +115,7 @@ module Pistoncms
         @current_user = block if block
         @current_user || DEFAULT_CURRENT_USER
       end
+
     end
 
   end
