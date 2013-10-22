@@ -1,5 +1,6 @@
 require 'rails/generators'
 require File.expand_path('../utils', __FILE__)
+require File.expand_path('../migrations', __FILE__)
 
 # inspired by https://github.com/sferik/rails_admin/blob/master/lib/generators/rails_admin/install_generator.rb
 
@@ -9,6 +10,7 @@ module Pistoncms
     include Rails::Generators::Migration
     include Generators::Utils::InstanceMethods
     extend Generators::Utils::ClassMethods
+    include Generators::Migrations
 
     class_option :skip_devise, :type => :boolean, :aliases => '-D',
       :desc => "Skip installation and setup of devise gem."
@@ -91,8 +93,7 @@ module Pistoncms
         end
       end
       display "Lets copy over piston's migration files"
-      migration_template 'create_entries.rb', 'db/migrate/create_pistoncms_entries.rb' rescue display $!.message
-      migration_template 'create_friendly_id_slugs.rb', 'db/migrate/create_friendly_id_slugs.rb' rescue display $!.message
+      run_migrations
       display "Job's done: customize devise, migrate, start your server and visit '/#{namespace}'!", :magenta
 
     end
