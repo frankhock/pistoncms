@@ -41,6 +41,14 @@ body.pistoncms {
   }
 }
 
+.dark {
+  color: #333;
+  &:hover {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
 #piston_wrap {
   height: auto;
   min-height: 100%;

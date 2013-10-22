@@ -1,7 +1,7 @@
 PATH
   remote: ../../
   specs:
-    pistoncms (0.0.1)
+    pistoncms (0.0.3)
       bootstrap-sass-rails (~> 3.0.0.3)
       ckeditor (~> 4.0.6)
       coffee-rails (~> 4.0.0)
