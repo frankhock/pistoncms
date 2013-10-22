@@ -18,4 +18,8 @@ FactoryGirl.define do
     password_confirmation "password"
   end
 
+  factory :menu, class: Pistoncms::Menu do 
+    name 'primary'
+  end
+
 end
