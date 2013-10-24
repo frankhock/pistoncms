@@ -17,6 +17,13 @@ html
             a href="#"
               span.glyphicon.glyphicon-home
               | Dashboard
+          - if @additional_admin_menu_items.any?
+            - @additional_admin_menu_items.each do |item|
+              li.menu-top
+                a href="#{item[:link]}"
+                  span class="glyphicon #{item[:icon]}"
+                  = "#{item[:title]}"
+
           li.menu-top
             a href="#{posts_path}"
               span.glyphicon.glyphicon-pencil
@@ -25,6 +32,10 @@ html
             a href="#{pages_path}"
               span.glyphicon.glyphicon-paperclip
               | Pages
+          li.menu-top
+            a href="#{menus_path}"
+              span.glyphicon.glyphicon-th
+              | Menus
 
       #piston_content
         #piston_body

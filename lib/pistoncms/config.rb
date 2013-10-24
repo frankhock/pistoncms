@@ -30,6 +30,13 @@ module Pistoncms
       @@public_layout || 'pistoncms/layouts/application'
     end
 
+    mattr_accessor :additional_admin_menu_items
+
+    def self.additional_admin_menu_items=(value)
+      @@additional_admin_menu_items = value if value.present?
+      @@additional_admin_menu_items || []
+    end
+
     class << self
 
 

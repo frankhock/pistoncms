@@ -8,6 +8,7 @@ Pistoncms::Engine.routes.draw do
 
   # Backend
   scope "/admin" do
+    resources :menus
     resources :pages
     resources :posts
   end

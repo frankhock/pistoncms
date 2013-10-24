@@ -5,7 +5,7 @@ class CreatePistoncmsEntries < ActiveRecord::Migration
       t.string :title,      null: false
       t.string :name,       null: false
       t.string :slug
-      t.string :content
+      t.text :content
       t.datetime :deleted_at
       t.timestamps
     end

@@ -11,3 +11,5 @@ end
 
 Pistoncms.config.public_layout = 'application'
 
+Pistoncms.config.additional_admin_menu_items = [{title: "Test", link: "http://www.google.com", icon: 'glyphicon-cog'}]
+

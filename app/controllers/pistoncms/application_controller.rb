@@ -5,6 +5,7 @@ module Pistoncms
     rescue_from ActiveRecord::RecordNotFound, with: :render_404  
 
     before_action :_authenticate!
+    before_action :_set_additional_admin_menu_items
 
     protected
 
@@ -16,6 +17,10 @@ module Pistoncms
 
     def _authenticate!
        instance_eval &Pistoncms::Config.authenticate_with
+    end
+
+    def _set_additional_admin_menu_items
+      @additional_admin_menu_items = Pistoncms.config.additional_admin_menu_items
     end
 
   end
