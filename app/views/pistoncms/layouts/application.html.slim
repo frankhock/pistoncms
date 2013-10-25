@@ -17,7 +17,7 @@ html
             a href="#"
               span.glyphicon.glyphicon-home
               | Dashboard
-          - if @additional_admin_menu_items.any?
+          - if @additional_admin_menu_items && @additional_admin_menu_items.any?
             - @additional_admin_menu_items.each do |item|
               li.menu-top
                 a href="#{item[:link]}"
