@@ -3,6 +3,7 @@ html
   head
     title Pistoncms
     = stylesheet_link_tag    "pistoncms/application", media: "all"
+    = javascript_include_tag "pistoncms/application"
     = csrf_meta_tags
 
     - if content_for? :stylesheets
@@ -46,5 +47,3 @@ html
             .wrap
               = render partial: "pistoncms/shared/flash_messages"
               = yield
-
-    = javascript_include_tag "pistoncms/application"
