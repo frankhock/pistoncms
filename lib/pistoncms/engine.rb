@@ -9,7 +9,6 @@ require 'slim-rails'
 
 module Pistoncms
   class Engine < ::Rails::Engine
-    isolate_namespace Pistoncms
 
     config.generators do |g|
       g.test_framework :rspec, :view_specs => false
