@@ -1,5 +1,6 @@
 UPLOADCARE_PUBLIC_KEY = "e2dc3ae396e76af502b5" // Uploadcare public key
 CKEDITOR.config.extraPlugins = 'uploadcare'
+CKEDITOR.config.allowedContent = true // Allow source code to be edited
 CKEDITOR.config.toolbar= [
                     { name: 'insert', items: [ 'Uploadcare' ] },
                     { name: 'tools', items: [ 'Maximize' ] },
