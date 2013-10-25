@@ -3,10 +3,10 @@
     header.panel-heading
       h2
         = controller_name(params)
-        = link_to "Add New", eval("new_#{controller_name(params).downcase.singularize}_path"), class: "btn btn-default btn-xs"
+        = link_to "Add New", eval("new_pistoncms_#{controller_name(params).downcase.singularize}_path"), class: "btn btn-default btn-xs"
 
     .inner
-      = form_tag( eval("#{controller_name(params).downcase}_path"), method: :get ) do
+      = form_tag( eval("pistoncms_#{controller_name(params).downcase}_path"), method: :get ) do
 
         .panel-body
 
@@ -14,7 +14,7 @@
           / ul.entry-status-selection
           /   | Status selection
 
-          / / Search 
+          / / Search
           / .search-entries
           /   .input-group
           /     = text_field_tag "search", params[:search], class: "form-control"
@@ -38,7 +38,7 @@
             - @entries.each do |entry|
               tr
                 td width=20 = check_box_tag "entry[]", entry.id, false
-                td= link_to entry.title.titleize, eval("edit_#{class_name(entry).downcase}_path(entry)")
+                td= link_to entry.title.titleize, eval("edit_pistoncms_#{class_name(entry).downcase}_path(entry)")
                 td= entry.created_at.strftime("%d/%m/%Y")
 
         / TODO fix because above bulk actions interferes

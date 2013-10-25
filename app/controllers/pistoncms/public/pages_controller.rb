@@ -1,4 +1,4 @@
-class Pistoncms::Public::PagesController < Pistoncms::Public::ApplicationController
+class Pistoncms::Public::PagesController < Pistoncms::Public::PistoncmsController
 
   before_action :_set_page
 

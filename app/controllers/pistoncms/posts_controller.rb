@@ -1,4 +1,4 @@
-class Pistoncms::PostsController < Pistoncms::ApplicationController
+class Pistoncms::PostsController < Pistoncms::PistoncmsController
   include Pistoncms::Concerns::EntryLike
 
   before_action :_set_post
@@ -16,20 +16,20 @@ class Pistoncms::PostsController < Pistoncms::ApplicationController
 
     if @post.save
       flash[:success] = "Post published."
-      redirect_to edit_post_url(@post)
+      redirect_to edit_pistoncms_post_url(@post)
     else
       render :new
     end
   end
 
   def edit
-    
+
   end
 
   def update
     if @entry.update_attributes(post_params)
       flash[:notice] = "Post updated."
-      redirect_to edit_post_path(@entry)
+      redirect_to edit_pistoncms_post_path(@entry)
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class Pistoncms::PostsController < Pistoncms::ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:pistoncms_post).permit(:title, :content)
   end
 
 end

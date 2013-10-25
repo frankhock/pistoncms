@@ -1,4 +1,4 @@
-class Pistoncms::MenusController < Pistoncms::ApplicationController 
+class Pistoncms::MenusController < Pistoncms::PistoncmsController
 
   def index
     @menus = Pistoncms::Menu.all

@@ -1,9 +1,9 @@
-class Pistoncms::Public::PostsController < Pistoncms::Public::ApplicationController
+class Pistoncms::Public::PostsController < Pistoncms::Public::PistoncmsController
 
   before_action :_set_post
 
   def show
-    
+
   end
 
   private

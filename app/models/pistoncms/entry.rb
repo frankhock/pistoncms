@@ -1,8 +1,10 @@
 module Pistoncms
   class Entry < ActiveRecord::Base
+    self.table_name = 'pistoncms_entries'
+
     extend FriendlyId
     friendly_id :title, use: [:slugged, :finders]
-    
+
     acts_as_paranoid
 
     BULK_ACTIONS = {trash: 'Move to Trash'}

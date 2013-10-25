@@ -1,4 +1,4 @@
-class Pistoncms::Public::ApplicationController < Pistoncms::ApplicationController
+class Pistoncms::Public::PistoncmsController < Pistoncms::PistoncmsController
   layout :_set_layout
 
   skip_before_action :_authenticate!

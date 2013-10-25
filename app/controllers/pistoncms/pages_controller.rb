@@ -1,4 +1,4 @@
-class Pistoncms::PagesController < Pistoncms::ApplicationController
+class Pistoncms::PagesController < Pistoncms::PistoncmsController
   include Pistoncms::Concerns::EntryLike
 
   before_action :_set_page
@@ -16,20 +16,20 @@ class Pistoncms::PagesController < Pistoncms::ApplicationController
 
     if @page.save
       flash[:success] = "Page published."
-      redirect_to edit_page_url(@page)
+      redirect_to edit_pistoncms_page_url(@page)
     else
       render :new
     end
   end
 
   def edit
-    
+
   end
 
   def update
     if @entry.update_attributes(page_params)
       flash[:notice] = "Page updated."
-      redirect_to edit_page_path(@entry)
+      redirect_to edit_pistoncms_page_path(@entry)
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class Pistoncms::PagesController < Pistoncms::ApplicationController
   end
 
   def page_params
-    params.require(:page).permit(:title, :content)
+    params.require(:pistoncms_page).permit(:title, :content)
   end
 
 end

@@ -1,8 +1,8 @@
 module Pistoncms
-  class ApplicationController < ActionController::Base
+  class PistoncmsController < ApplicationController
     layout 'pistoncms/layouts/application'
 
-    rescue_from ActiveRecord::RecordNotFound, with: :render_404  
+    rescue_from ActiveRecord::RecordNotFound, with: :render_404
 
     before_action :_authenticate!
     before_action :_set_additional_admin_menu_items

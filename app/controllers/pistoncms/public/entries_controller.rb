@@ -1,12 +1,12 @@
-class Pistoncms::Public::EntriesController < Pistoncms::Public::ApplicationController 
+class Pistoncms::Public::EntriesController < Pistoncms::Public::PistoncmsController
 
   before_action :_set_entry
 
   def show
     if @entry.is_a?(Pistoncms::Page)
-      redirect_to public_page_url(@entry.slug)
+      redirect_to pistoncms_public_page_url(@entry.slug)
     else
-      redirect_to public_post_url(@entry.slug)
+      redirect_to pistoncms_public_post_url(@entry.slug)
     end
   end
 

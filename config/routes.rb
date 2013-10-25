@@ -5,7 +5,7 @@ class RouteConstraint
 end
 
 Rails.application.routes.draw do
-  scope module: 'pistoncms' do
+  namespace :pistoncms, path: "" do
 
     # Backend
     scope "/admin" do
