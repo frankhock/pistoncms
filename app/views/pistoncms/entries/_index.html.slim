@@ -2,11 +2,11 @@
   section.panel
     header.panel-heading
       h2
-        = controller_name(params)
-        = link_to "Add New", eval("new_pistoncms_#{controller_name(params).downcase.singularize}_path"), class: "btn btn-default btn-xs"
+        = ctrl_name(params)
+        = link_to "Add New", eval("new_pistoncms_#{ctrl_name(params).downcase.singularize}_path"), class: "btn btn-default btn-xs"
 
     .inner
-      = form_tag( eval("pistoncms_#{controller_name(params).downcase}_path"), method: :get ) do
+      = form_tag( eval("pistoncms_#{ctrl_name(params).downcase}_path"), method: :get ) do
 
         .panel-body
 

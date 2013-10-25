@@ -1,7 +1,7 @@
 module Pistoncms
   module ApplicationHelper
 
-    def controller_name(params)
+    def ctrl_name(params)
       params[:controller].split("/").last.titleize
     end
 
