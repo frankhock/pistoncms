@@ -18,15 +18,16 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   # Dependencies
-  s.add_dependency 'bootstrap-sass-rails', '~> 3.0.0.3'
-  s.add_dependency 'ckeditor', '~> 4.0.6'
-  s.add_dependency 'coffee-rails', '~> 4.0.0'
-  s.add_dependency 'friendly_id', '~> 5.0.0'
-  s.add_dependency 'jquery-rails', '~> 3.0.4'
-  s.add_dependency 'paranoia', '~> 2.0.0'
-  s.add_dependency 'rails', '~> 4.0.0'
-  s.add_dependency 'sass-rails', '~> 4.0'
-  s.add_dependency 'slim-rails', '>= 2.0.3'
+  s.add_dependency 'bootstrap-sass-rails',      '~> 3.0.0.3'
+  s.add_dependency 'ckeditor',                  '~> 4.0.6'
+  s.add_dependency 'coffee-rails',              '~> 4.0.0'
+  s.add_dependency 'friendly_id',               '~> 5.0.0'
+  s.add_dependency 'jquery-rails',              '~> 3.0.4'
+  s.add_dependency 'jquery-fileupload-rails',   '~> 0.4.1'
+  s.add_dependency 'paranoia',                  '~> 2.0.0'
+  s.add_dependency 'rails',                     '~> 4.0.0'
+  s.add_dependency 'sass-rails',                '~> 4.0'
+  s.add_dependency 'slim-rails',                '>= 2.0.3'
 
   # Development Dependencies 
   s.add_development_dependency 'capybara', '2.1.0'

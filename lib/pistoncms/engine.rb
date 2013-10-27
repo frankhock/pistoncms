@@ -4,6 +4,7 @@ require 'sass-rails'
 require 'coffee-rails'
 require 'friendly_id'
 require 'jquery-rails'
+require 'jquery-fileupload-rails'
 require 'paranoia'
 require 'slim-rails'
 

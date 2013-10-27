@@ -1,3 +1,7 @@
+/ Media Upload Form
+= content_for :lightbox do 
+  = render partial: "pistoncms/media/upload_form"
+
 = form_for entry do |f|
   = error_messages_for entry
   #entry_stuff
@@ -7,6 +11,10 @@
       #entry_body_content
         .form-group
           = f.text_field :title, class: "form-control", placeholder: "Enter title here"
+
+        .form-group
+          a class='btn btn-default' href='javascript:void(0)' id='show_media_upload'
+            | Add Media
 
         .form-group
           = f.cktext_area :content, ckeditor: { uiColor: "#FFFFFF" }
@@ -23,6 +31,10 @@
               #publishing-action
                 = f.submit 'Publish', class: "btn btn-primary"
               .clearfix
-            
-
       .clearfix
+
+= content_for :footer do 
+  javascript:
+    $(document).ready(function () {
+      window.Media.initialize();
+    });

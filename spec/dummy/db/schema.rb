@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131022204116) do
+ActiveRecord::Schema.define(version: 20131026230630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,14 @@ ActiveRecord::Schema.define(version: 20131022204116) do
   end
 
   add_index "pistoncms_entries", ["slug"], name: "index_pistoncms_entries_on_slug", unique: true, using: :btree
+
+  create_table "pistoncms_media", force: true do |t|
+    t.string "title"
+    t.string "file"
+    t.text   "caption"
+    t.string "alt_text"
+    t.text   "description"
+  end
 
   create_table "pistoncms_menus", force: true do |t|
     t.string   "name"

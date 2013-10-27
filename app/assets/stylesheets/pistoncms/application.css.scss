@@ -1,6 +1,7 @@
 /*** bootstrap ***/
 @import 'sections/variables';
 @import "twitter/bootstrap";
+@import 'jquery.fileupload-ui';
 
 
 @import 'common';
@@ -12,3 +13,4 @@
 @import 'sections/tables';
 @import 'sections/side_nav';
 @import 'sections/entries';
+@import 'sections/media';

@@ -1,0 +1,25 @@
+.media-modal {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1100;
+  background: #fff;
+
+  .media-close-btn {
+    position: absolute;
+    display: inline-block;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    border: 2px solid #222;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

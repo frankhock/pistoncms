@@ -13,6 +13,10 @@ html
     header.navbar.navbar-inverse.header
       .navbar-header.nav-bar.lside
         = link_to "Piston", "#", class: "nav-brand", data: { toggle: "fullscreen" }
+
+    - if content_for? :lightbox
+      = yield :lightbox
+
     #piston_wrap
       #piston_side_nav_back
       #piston_side_nav_wrap
@@ -47,3 +51,6 @@ html
             .wrap
               = render partial: "pistoncms/shared/flash_messages"
               = yield
+
+    - if content_for? :footer
+      = yield :footer
