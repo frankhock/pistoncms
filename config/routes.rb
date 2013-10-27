@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
     # Backend
     scope "/admin" do
+      resources :media
       resources :menus
       resources :pages
       resources :posts

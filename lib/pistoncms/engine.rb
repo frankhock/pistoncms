@@ -1,4 +1,5 @@
 require 'bootstrap-sass-rails'
+require 'carrierwave'
 require 'ckeditor'
 require 'sass-rails'
 require 'coffee-rails'

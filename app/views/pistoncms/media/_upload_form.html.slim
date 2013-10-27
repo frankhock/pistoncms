@@ -1,6 +1,7 @@
 #pistoncms_lightbox
   .media-modal
     = link_to "X", "javascript:void(0)", class: "media-close-btn"
-    / = form_for Pistoncms::Media.new do |f|
-    /   = f.label :file
-    p Hello
+
+    = form_for Pistoncms::Media.new, html: { multipart: true } do |f|
+      = f.label :file
+      = f.file_field :file, multiple: true, name: 'media[file]'
