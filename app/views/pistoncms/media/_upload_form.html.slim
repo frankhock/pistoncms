@@ -1,7 +1,33 @@
 #pistoncms_lightbox
-  .media-modal
-    = link_to "X", "javascript:void(0)", class: "media-close-btn"
+  .media-upload-inner-wrap1
+    .media-upload-inner-wrap2
+      .media-upload-panel-wrap
+        .media-upload-panel
+          .media-upload-body
+            = link_to "X", "javascript:void(0)", class: "media-close-btn"
+            .tabbable.tabs-left
+              ul.nav.nav-tabs
+                li.active
+                  a data-toggle="tab" href="#insert_media" Insert Media
+                li
+                  a data-toggle="tab" href="#set_featured_image" Set Featured Image
+              .tab-content
+                #insert_media.tab-pane.active
+                  = form_for Pistoncms::Media.new, html: { multipart: true } do |f|
+                    .drag-drop-title
+                      | Drop a file here
+                    .or-title
+                      | or
+                    = f.file_field :file, multiple: true, name: 'media[file]'
 
-    = form_for Pistoncms::Media.new, html: { multipart: true } do |f|
-      = f.label :file
-      = f.file_field :file, multiple: true, name: 'media[file]'
+                  script#template-upload type="text/x-tmpl"
+                    .upload
+                      | {%=o.name%}
+                      .progress.progress-striped.active
+                        .progress-bar.progress-bar-info style="width: 0%"
+                #set_featured_image.tab-pane
+                  | Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                  | Aliquam in felis sit amet augue.
+
+
+

@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'carrierwave',               '~> 0.9.0'
   s.add_dependency 'ckeditor',                  '~> 4.0.6'
   s.add_dependency 'coffee-rails',              '~> 4.0.0'
+  s.add_dependency 'compass-rails',             '~> 2.0.alpha.0'
   s.add_dependency 'friendly_id',               '~> 5.0.0'
   s.add_dependency 'jquery-rails',              '~> 3.0.4'
   s.add_dependency 'jquery-fileupload-rails',   '~> 0.4.1'
@@ -30,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails',                '~> 4.0'
   s.add_dependency 'slim-rails',                '>= 2.0.3'
 
-  # Development Dependencies 
+  # Development Dependencies
   s.add_development_dependency 'capybara', '2.1.0'
   s.add_development_dependency "pg"
   s.add_development_dependency 'rspec-rails', '2.14.0'
