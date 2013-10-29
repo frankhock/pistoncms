@@ -1,20 +1,51 @@
 .new_pistoncms_media {
   text-align: center;
+
+  .drop-area {
+    padding: 40px 0;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(248, 248, 248);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-color: rgb(197, 202, 205);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-style: dashed;
+    border-bottom-width: 3px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(197, 202, 205);
+    border-left-style: dashed;
+    border-left-width: 3px;
+    border-right-color: rgb(197, 202, 205);
+    border-right-style: dashed;
+    border-right-width: 3px;
+    border-top-color: rgb(197, 202, 205);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-style: dashed;
+    border-top-width: 3px;
+  }
 }
 
 .drag-drop-title {
   font-size: 40px;
   line-height: 1;
-  color: #DEE0E1;
+  color: darken(#a3acbb, 5%);
   font-weight: bold;
-  margin: 20px 0 66px;
+  margin: 0;
   text-shadow: 0 1px #FFF;
 }
 
 .or-title {
-  font-size: 15px;
-  color: #8F9498;
-  margin-bottom: 44px;
+  font-size: 16px;
+  color: darken(#a3acbb, 2%);
+  margin: 10px 0;
 }
 
 /*** Upload Form ***/
@@ -46,14 +77,16 @@
   top: 8px;
   right: 8px;
   width: 24px;
-  border: 2px solid #222;
+  border: 2px solid rgb(197, 202, 205);
   text-align: center;
   font-size: 16px;
   line-height: 20px;
-  color: #222;
+  color: rgb(197, 202, 205);
   @include border-radius(50%);
   &:hover {
+    color: #939cab;
     text-decoration: none;
+    border: 2px solid #939cab;
   }
 }
 
@@ -101,6 +134,7 @@
   text-align: center;
   #preview_image {
     max-width: 636px;
+    max-height: 500px;
   }
 }
 

@@ -14,13 +14,13 @@
               .tab-content
                 #insert_media.tab-pane.active
                   = form_for Pistoncms::Media.new, html: { multipart: true } do |f|
-
-                    .drag-drop-title
-                      | Drop a file here
-                    .or-title
-                      | or
-                    = f.file_field :file, multiple: false, name: 'media[file]', class: 'hidden'
-                    button.btn.btn-primary.btn-lg#fake_file_btn Choose a file from computer
+                    .drop-area
+                      .drag-drop-title
+                        | Drop a file here
+                      .or-title
+                        | or
+                      = f.file_field :file, multiple: false, name: 'media[file]', class: 'hidden'
+                      button.btn.btn-primary.btn-lg#fake_file_btn Choose a file from computer
 
                   script#template-upload type="text/x-tmpl"
                     .upload-data
