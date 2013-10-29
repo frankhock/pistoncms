@@ -1,0 +1,5 @@
+.preview-media-wrap
+  .preview-media-image
+    = image_tag(@media.file_url, id: "preview_image") if @media.file_url.present?
+
+  = link_to "Insert", "javascript:void(0)", class: "pull-right btn btn-primary media-btn-insert"

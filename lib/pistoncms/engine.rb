@@ -8,6 +8,7 @@ require 'friendly_id'
 require 'jquery-rails'
 require 'jquery-fileupload-rails'
 require 'paranoia'
+require 'rmagick'
 require 'slim-rails'
 
 module Pistoncms

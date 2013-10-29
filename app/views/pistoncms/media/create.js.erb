@@ -1,5 +1,7 @@
 <% if @media.new_record? %>
   alert('Failed');
 <% else %>
-  console.log('media was uploaded');
+  window.Media.mediaForm().hide();
+  $('#insert_media').append("<%= j(render partial: 'preview' ) %>");
+  window.Media.initialize();
 <% end %>

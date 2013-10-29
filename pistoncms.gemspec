@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-fileupload-rails',   '~> 0.4.1'
   s.add_dependency 'paranoia',                  '~> 2.0.0'
   s.add_dependency 'rails',                     '~> 4.0.0'
+  s.add_dependency 'rmagick',                   '~> 2.13.2'
   s.add_dependency 'sass-rails',                '~> 4.0'
   s.add_dependency 'slim-rails',                '>= 2.0.3'
 
