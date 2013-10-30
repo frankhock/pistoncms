@@ -46,12 +46,25 @@ Media =
       val = $(this).attr('data-id')
       Media.setFeaturedImage(val)
       Media.resetMediaForm()
+      Media.addFeaturedThumb($(this).attr('src'))
 
     $(document).on 'click', removeFtImg, (e) ->
       e.preventDefault()
       $(removeFtImg).remove()
       Media.removeFeaturedImage()
+      Media.removeFeaturedThumb()
 
+  #
+  # Add/Remove Featured Thumb
+  #
+
+  addFeaturedThumb: (src) ->
+    src = src.replace('thumb_', '')
+    img = '<img  src="' + src + '" />'
+    $('#featured_image_thumbnail').html(img)
+
+  removeFeaturedThumb: () ->
+    $('#featured_image_thumbnail img').remove()
 
   featuredImageBtn: () ->
     $('#featured_image_btn')

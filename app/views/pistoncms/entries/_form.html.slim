@@ -1,5 +1,5 @@
 / Media Upload Form
-= content_for :lightbox do 
+= content_for :lightbox do
   = render partial: "pistoncms/media/upload_form"
 
 = form_for entry do |f|
@@ -36,11 +36,12 @@
           header.panel-heading
             h3 Featured Image
           .panel-body
+            #featured_image_thumbnail
             = link_to "Set featured image", "javascript:void", id: "featured_image_btn"
             = hidden_field_tag "pistoncms_post[featured_image]", nil
       .clearfix
 
-= content_for :footer do 
+= content_for :footer do
   javascript:
     $(document).ready(function () {
       window.Media.initialize();
