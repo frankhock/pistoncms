@@ -6,6 +6,7 @@ class CreatePistoncmsMedia < ActiveRecord::Migration
       t.text :caption
       t.string :alt_text
       t.text :description
+      t.timestamps
     end
   end
 end

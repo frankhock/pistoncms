@@ -5,6 +5,7 @@
         .media-upload-panel
           .media-upload-body
             = link_to "X", "javascript:void(0)", class: "media-close-btn"
+
             .tabbable.tabs-left
               ul.nav.nav-tabs
                 li.active
@@ -28,8 +29,8 @@
                       .progress.progress-striped.active
                         .progress-bar.progress-bar-info style="width: 0%"
                 #set_featured_image.tab-pane
-                  | Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                  | Aliquam in felis sit amet augue.
+                  #media_library
+                    = render partial: 'pistoncms/media/upload_library', locals: { medias: @medias }
 
 
 

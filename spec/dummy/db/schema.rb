@@ -62,11 +62,13 @@ ActiveRecord::Schema.define(version: 20131026230630) do
   add_index "pistoncms_entries", ["slug"], name: "index_pistoncms_entries_on_slug", unique: true, using: :btree
 
   create_table "pistoncms_media", force: true do |t|
-    t.string "title"
-    t.string "file"
-    t.text   "caption"
-    t.string "alt_text"
-    t.text   "description"
+    t.string   "title"
+    t.string   "file"
+    t.text     "caption"
+    t.string   "alt_text"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pistoncms_menus", force: true do |t|

@@ -3,13 +3,20 @@ Media =
 
   initialize: () ->
 
-    $showBtn      = $('#show_media_upload')
-    $hideBtn      = $('.media-close-btn')
-    $fakeFileBtn  = $('#fake_file_btn')
-    $realFileBtn  = $('#pistoncms_media_file')
-    $insertBtn    = $('.media-btn-insert')
+    $showBtn        = $('#show_media_upload')
+    $hideBtn        = $('.media-close-btn')
+    $fakeFileBtn    = $('#fake_file_btn')
+    $realFileBtn    = $('#pistoncms_media_file')
+    $insertBtn      = $('.media-btn-insert')
+    featureBtn     = '#featured_image_btn'
+    $featureSelect  = $('.select-media-thumb')
+    removeFtImg    = '#remove_featured_image'
 
     $showBtn.on 'click', (e) ->
+      e.preventDefault()
+      Pistoncms.openLightbox()
+
+    $(document).on 'click', featureBtn, (e) ->
       e.preventDefault()
       Pistoncms.openLightbox()
 
@@ -34,6 +41,24 @@ Media =
       e.preventDefault()
       Media.resetMediaForm()
 
+    $featureSelect.on 'click', (e) ->
+      e.preventDefault()
+      val = $(this).attr('data-id')
+      Media.setFeaturedImage(val)
+      Media.resetMediaForm()
+
+    $(document).on 'click', removeFtImg, (e) ->
+      e.preventDefault()
+      $(removeFtImg).remove()
+      Media.removeFeaturedImage()
+
+
+  featuredImageBtn: () ->
+    $('#featured_image_btn')
+
+  featuredImageField: () ->
+    $('#pistoncms_post_featured_image')
+
   mediaForm: () ->
     $('#new_pistoncms_media')
 
@@ -45,6 +70,18 @@ Media =
     Media.mediaForm().show()
     Media.previewContainer().remove()
     Media.uploadDataDiv().remove()
+
+  removeFeaturedImage: () ->
+    Media.featuredImageField().val("")
+    addLink = '<a href="javascript:void" id="featured_image_btn">Set featured image</a>'
+    Media.featuredImageField().before(addLink)
+
+
+  setFeaturedImage: (value) ->
+    Media.featuredImageBtn().remove()
+    removeLink = "<a href='javascript:void(0)' id='remove_featured_image'>Remove featured image</a>"
+    Media.featuredImageField().before(removeLink)
+    Media.featuredImageField().val(value)
 
   uploadDataDiv: () ->
     $('.upload-data')

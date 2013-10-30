@@ -1,0 +1,5 @@
+- medias.each_slice(4) do |row|
+  .row
+    - row.each do |media|
+      .col-md-3
+        = image_tag(media.file_url(:thumb), class: "select-media-thumb", data: { id: media.id }) if media.file_url.present?

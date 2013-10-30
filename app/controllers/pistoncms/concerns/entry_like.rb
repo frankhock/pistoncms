@@ -7,10 +7,15 @@ module Pistoncms
       included do
 
         before_action :_handle_bulk_actions, only: [:index]
+        before_action :_set_media
 
       end
 
       private
+
+      def _set_media
+        @medias = Pistoncms::Media.order('created_at DESC')
+      end
 
       def _handle_bulk_actions
         handler = Pistoncms::EntryBulkActionHandler.new(params)

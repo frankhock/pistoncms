@@ -31,6 +31,13 @@
               #publishing-action
                 = f.submit 'Publish', class: "btn btn-primary"
               .clearfix
+
+        section.panel
+          header.panel-heading
+            h3 Featured Image
+          .panel-body
+            = link_to "Set featured image", "javascript:void", id: "featured_image_btn"
+            = hidden_field_tag "pistoncms_post[featured_image]", nil
       .clearfix
 
 = content_for :footer do 

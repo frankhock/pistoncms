@@ -3,5 +3,6 @@
 <% else %>
   window.Media.mediaForm().hide();
   $('#insert_media').append("<%= j(render partial: 'preview' ) %>");
+  $('#media_library').html("<%= j(render partial: 'upload_library', locals: { medias: @medias } ) %>");
   window.Media.initialize();
 <% end %>
