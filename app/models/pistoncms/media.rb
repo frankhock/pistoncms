@@ -5,5 +5,9 @@ module Pistoncms
     # Carrierwave Uploader
     mount_uploader :file, Pistoncms::FileUploader
 
+    #-----------------#
+    # - Associations -#
+    #-----------------#
+
   end
 end

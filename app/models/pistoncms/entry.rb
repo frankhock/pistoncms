@@ -9,6 +9,12 @@ module Pistoncms
 
     BULK_ACTIONS = {trash: 'Move to Trash'}
 
+    #-----------------#
+    # - Associations -#
+    #-----------------#
+
+    belongs_to :featured_image, class_name: "Pistoncms::Media"
+
     # Validations
     validates :title, presence: true, uniqueness: true
     validates :name, uniqueness: true

@@ -37,8 +37,9 @@
             h3 Featured Image
           .panel-body
             #featured_image_thumbnail
+              = image_tag(entry.featured_image.file_url) if entry.featured_image
             = link_to "Set featured image", "javascript:void", id: "featured_image_btn"
-            = hidden_field_tag "pistoncms_post[featured_image]", nil
+            = f.hidden_field :featured_image_id
       .clearfix
 
 = content_for :footer do

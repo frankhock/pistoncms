@@ -42,7 +42,7 @@ class Pistoncms::PagesController < Pistoncms::PistoncmsController
   end
 
   def page_params
-    params.require(:pistoncms_page).permit(:title, :content)
+    params.require(:pistoncms_page).permit(:title, :content, :featured_image)
   end
 
 end

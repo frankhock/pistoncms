@@ -50,15 +50,17 @@ ActiveRecord::Schema.define(version: 20131026230630) do
 
   create_table "pistoncms_entries", force: true do |t|
     t.string   "type"
-    t.string   "title",      null: false
-    t.string   "name",       null: false
+    t.string   "title",             null: false
+    t.string   "name",              null: false
     t.string   "slug"
     t.string   "content"
+    t.integer  "featured_image_id"
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "pistoncms_entries", ["featured_image_id"], name: "index_pistoncms_entries_on_featured_image_id", using: :btree
   add_index "pistoncms_entries", ["slug"], name: "index_pistoncms_entries_on_slug", unique: true, using: :btree
 
   create_table "pistoncms_media", force: true do |t|

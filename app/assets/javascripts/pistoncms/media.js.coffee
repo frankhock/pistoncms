@@ -70,7 +70,7 @@ Media =
     $('#featured_image_btn')
 
   featuredImageField: () ->
-    $('#pistoncms_post_featured_image')
+    $('#pistoncms_post_featured_image_id')
 
   mediaForm: () ->
     $('#new_pistoncms_media')
