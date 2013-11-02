@@ -9,7 +9,6 @@ require 'gon'
 require 'jquery-rails'
 require 'jquery-fileupload-rails'
 require 'paranoia'
-require 'Rmagick'
 require 'slim-rails'
 
 module Pistoncms
