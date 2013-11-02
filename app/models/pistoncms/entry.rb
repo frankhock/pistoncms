@@ -15,21 +15,40 @@ module Pistoncms
 
     belongs_to :featured_image, class_name: "Pistoncms::Media"
 
-    # Validations
+    #-----------------#
+    # - Validations - #
+    #-----------------#
+
     validates :title, presence: true, uniqueness: true
     validates :name, uniqueness: true
 
-    # Callbacks
+    #---------------#
+    # - Callbacks - #
+    #---------------#
+
     before_validation :_set_name
+
+    #------------#
+    # - Scopes - #
+    #------------#
+
+    scope :latest, lambda {|*record_limit| order('created_at DESC').limit(record_limit) }
 
     #
     # Instance Methods
     #
 
+    # determines type of entry with namespace optoins
+    #
+    # @post.type
+    #
     def type(options={})
       namespace = options.fetch(:namespace, true)
+      underscore = options.fetch(:underscore, false)
+
       type = super()
-      namespace ? type : type.split("::").last
+      type = namespace ? type : type.split("::").last
+      type = underscore ? type.gsub("::", "_").downcase : type
     end
 
     private

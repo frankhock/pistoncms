@@ -1,6 +1,6 @@
 .rvmrc
 spec/dummy/log
-spec/dummy/tmp
+spec/dummy/tmp/*
 tmp/
 
 spec/dummy/public/*

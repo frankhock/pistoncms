@@ -8,7 +8,8 @@ class Pistoncms::PostsController < Pistoncms::PistoncmsController
   end
 
   def new
-    @post = Pistoncms::Post.new
+    @entry = Pistoncms::Post.new
+    gon.entry_type = @entry.type(underscore: true)
   end
 
   def create
@@ -23,7 +24,7 @@ class Pistoncms::PostsController < Pistoncms::PistoncmsController
   end
 
   def edit
-
+    gon.entry_type = @entry.type(underscore: true)
   end
 
   def update

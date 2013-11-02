@@ -8,7 +8,8 @@ class Pistoncms::PagesController < Pistoncms::PistoncmsController
   end
 
   def new
-    @page = Pistoncms::Page.new
+    @entry = Pistoncms::Page.new
+    gon.entry_type = @entry.type(underscore: true)
   end
 
   def create
@@ -23,7 +24,7 @@ class Pistoncms::PagesController < Pistoncms::PistoncmsController
   end
 
   def edit
-
+    gon.entry_type = @entry.type(underscore: true)
   end
 
   def update

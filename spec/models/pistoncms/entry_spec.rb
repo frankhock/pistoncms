@@ -12,9 +12,9 @@ module Pistoncms
       before { subject.save }
       [:title].each do |attribute|
 
-        context "when #{attribute} is nil" do 
+        context "when #{attribute} is nil" do
           subject { Entry.new(attribute => nil) }
-          it "shouldn't allow blank #{attribute}" do 
+          it "shouldn't allow blank #{attribute}" do
             expect(subject.errors_on(attribute)).to include("can't be blank")
           end
         end
@@ -22,24 +22,30 @@ module Pistoncms
       end
     end
 
-    it 'should set name' do 
+    it 'should set name' do
       entry.name.should eq("hello-there")
     end
 
-    context 'instance of entry' do 
+    context 'instance of entry' do
 
-      describe '#type' do 
+      describe '#type' do
         let(:page) { build(:page) }
 
-        context 'namespace true' do 
-          it 'should set type' do 
+        context 'namespace true' do
+          it 'should set type' do
             page.type.should eq("Pistoncms::Page")
           end
         end
 
-        context 'namespace false' do 
-          it 'should set type' do 
+        context 'namespace false' do
+          it 'should set type' do
             page.type(namespace: false).should eq("Page")
+          end
+        end
+
+        context 'namespace true underscore true' do
+          it 'should set type' do
+            page.type(namespace: true, underscore: true).should eq('pistoncms_page')
           end
         end
       end

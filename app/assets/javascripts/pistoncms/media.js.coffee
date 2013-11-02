@@ -34,7 +34,7 @@ Media =
 
     $('.media-btn-insert').on 'click', (e) ->
       image = $('.preview-media-image:first-child').html();
-      CKEDITOR.instances['pistoncms_post_content'].insertHtml(image);
+      CKEDITOR.instances[gon.entry_type + '_content'].insertHtml(image);
       Pistoncms.closeLightbox()
 
     $insertBtn.on 'click', (e) ->
@@ -70,7 +70,7 @@ Media =
     $('#featured_image_btn')
 
   featuredImageField: () ->
-    $('#pistoncms_post_featured_image_id')
+    $('#' + gon.entry_type + '_featured_image_id')
 
   mediaForm: () ->
     $('#new_pistoncms_media')
