@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'coffee-rails',              '~> 4.0.0'
   s.add_dependency 'compass-rails',             '~> 2.0.alpha.0'
   s.add_dependency 'friendly_id',               '~> 5.0.0'
-  s.add_dependency 'gon',                       '~>4.1.1'
+  s.add_dependency 'gon',                       '>=4.1.1', '<6.5.0'
   s.add_dependency 'jquery-rails',              '~> 3.0.4'
   s.add_dependency 'jquery-fileupload-rails',   '~> 0.4.1'
   s.add_dependency 'paranoia',                  '~> 2.0.0'
